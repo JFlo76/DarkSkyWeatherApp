@@ -1,0 +1,62 @@
+html, body {
+	height: 100%;
+}
+body {
+	background: #eee;
+}
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	background: #fff;
+	min-height: 100%;
+}
+.forecast {
+	& > li {
+		padding: 15px;
+		.col-xs-6 {
+			@media (min-width: 436px), (orientation: landscape) {
+				width: 100%;
+			}
+		}
+		&.current {
+			width: 100%;
+			text-align: left;
+			font-size: 1.8rem;
+			background: #2196F3;
+			h1 {
+				color: #fff;
+				margin: 0	;
+				font-weight: normal;
+				& > span {
+					margin-right: 10px;
+				}
+				.temp {
+					color: #fff;
+					font-size: 3.6rem;
+					margin: 0;
+					display: inline;
+					line-height: 1;
+					&.lo {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+		.weekday {
+			font-size: 1.8rem;
+			&.day {
+				text-align: left;
+			}
+		}
+	}
+}
+.col-md-5 {
+	width: 20%;
+	@media (max-width: 436px) and (orientation: portrait) {
+		width: 100%;
+	}
+}

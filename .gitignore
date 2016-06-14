@@ -1,0 +1,10 @@
+logs/*
+!.gitkeep
+node_modules/
+bower_components/
+tmp
+darksky.sublime-project
+darksky.sublime-workspace
+api key.txt
+.DS_Store
+.idea

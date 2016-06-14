@@ -1,0 +1,33 @@
+<ul class="forecast row">
+	<li class="col-xs-12 col-md-5" ng-repeat="day in $ctrl.data.daily.data | limitTo: 6" ng-class="{current:$first}">
+		<ul class="data row">
+			<li class="col-xs-12" ng-if="$index === 0">
+				<span>Today</span>
+				<h1 ng-if="$index === 0">
+					<span>Seattle</span>
+					<span class="temp hi">{{day.temperatureMax | number: 0}}˚</span>
+					<span class="temp lo">{{day.temperatureMin | number: 0}}˚</span>
+				</h1>
+			</li>
+			<li class="col-xs-6 weekday day" ng-if="$index > 0">
+				<p>{{day.time * 1000 | date:'EEE'}}</p>
+			</li>
+			<li class="col-xs-6 weekday temp" ng-if="$index > 0">
+				<span class="temp hi">{{day.temperatureMax | number: 0}}˚ / </span>
+				<span class="temp lo">{{day.temperatureMin | number: 0}}˚</span>
+			</li>			
+			<li class="col-xs-12" ng-if="$index === 0">{{day.summary}}</li>
+
+			<!-- <li class="col-xs-12" ng-if="$index === 0">Today</li>
+			<li class="col-xs-6">
+				<h1 ng-if="$index === 0">Seattle</h1>
+				<p ng-if="$index > 0">{{day.time * 1000 | date:'EEE'}}</p>
+			</li>
+			<li class="col-xs-6">
+				<p class="temp hi">{{day.temperatureMax | number: 0}}˚</p>
+				<p class="temp lo">{{day.temperatureMin | number: 0}}˚</p>
+			</li>
+			<li class="col-xs-12" ng-if="$index === 0">{{day.summary}}</li> -->
+		</ul>
+	</li>
+</ul>
